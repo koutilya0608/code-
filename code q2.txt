@@ -1,0 +1,45 @@
+#include<stdio.h>
+
+#include<math.h>
+
+int power()
+
+{
+    
+int res;
+   
+ int  ans;
+   
+ double x;
+    
+double n;
+    
+int d;
+    
+printf("enter the value's a,b, and e:");
+    scanf("%lf,%lf,%d", &x,&n,&d);
+    
+if(x>=0)
+   
+ {
+        
+return x;
+  
+  }
+   
+ if(d>=0)
+    
+{
+        
+return d;
+    
+}
+    
+res=pow(x,n);
+  
+  ans=(int)res%d;
+ 
+   printf("%d",ans);
+ 
+   return 0;
+}

@@ -1,0 +1,109 @@
+#include<stdio.h>
+
+#include<stdlib.h>
+
+struct node 
+
+{
+    
+int data;
+    
+struct node *left;
+    
+struct node *right;
+};
+
+struct node *root=NULL;
+
+void main()
+
+{
+    
+int a;
+    
+insert(a);
+    
+return;
+
+}
+
+int insert(int val)
+
+{
+    
+int sum=0;
+    
+int sumValue;
+   
+ struct node *temp;
+    
+temp=(struct node*) malloc(sizeof(struct node));
+    
+struct node *current;
+    
+struct node *parent;
+    
+printf("enter the data:");
+    
+scanf("%d",&val);
+    
+temp->data=val;
+    
+temp->left=NULL;
+    
+temp->right=NULL;
+    
+parent=root;
+    
+if(root=NULL)
+    
+{
+       
+root=temp;
+    
+}
+    
+current=root;
+    
+while(current)
+    
+{
+        
+parent=current;
+        
+if(current->left!=NULL)
+        
+{
+            
+current=current->left;
+            
+current->data=temp->data;
+            
+sum=sum+current->data;
+       
+ }
+        
+if(current->right!=NULL)
+       
+ {
+           
+ current=current->right;
+            
+current->data=temp->data;
+            
+sum= sum+current->data;
+       
+ }
+        
+if((current->left == NULL) && (current->right=NULL))
+            
+current->data=temp->data;
+            
+sum=sum+current->data;
+       
+ }
+    
+ printf("%d",current->data);
+   
+ }
+}
